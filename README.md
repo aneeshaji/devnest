@@ -4,9 +4,11 @@ DevNest is a modern **technical blogging platform** built as a monorepo with bot
 
 ## 📁 Project Structure
 
+```bash
 devnest/
 ├── frontend/ # UI for technical blogs
 ├── backend/ # REST API for articles, users, comments
+```
 
 ## 🚀 Getting Started
 
@@ -15,7 +17,6 @@ devnest/
 ```bash
 git clone https://github.com/aneeshaji/devnest.git
 cd devnest
-
 ```
 
 🛠 Backend Setup
