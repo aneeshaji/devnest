@@ -3,8 +3,6 @@
 This is the frontend application for DevNest, built using **React (or Next.js)**.  
 It provides a clean interface for reading and writing technical articles.
 
----
-
 ## ▶️ Run Frontend
 
 ### Install dependencies

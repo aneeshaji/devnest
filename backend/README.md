@@ -3,8 +3,6 @@
 This is the backend service for DevNest, a technical blogging platform.  
 Built using **Node.js, Express, MongoDB**, and structured with MVC architecture.
 
----
-
 ## 🚀 Getting Started
 
 ### Install dependencies
