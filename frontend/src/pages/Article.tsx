@@ -137,21 +137,30 @@ export default function Article() {
 				<div className="article-content">
 					<ReactMarkdown
 						components={{
-							code({ node, inline, className, children, ...props }) {
+							code({ className, children, ...props }: any) {
 								const match = /language-(\w+)/.exec(className || '');
-								return !inline && match ? (
+
+								// If NO language → treat as inline code
+								if (!match) {
+									return (
+										<code className={className} {...props}>
+											{children}
+										</code>
+									);
+								}
+
+								return (
 									<div className="code-block">
 										<div className="code-header">
 											<span className="code-language">{match[1]}</span>
 											<button
 												className="code-copy"
-												onClick={() => {
-													navigator.clipboard.writeText(String(children));
-												}}
+												onClick={() => navigator.clipboard.writeText(String(children))}
 											>
 												Copy
 											</button>
 										</div>
+
 										<SyntaxHighlighter
 											style={vscDarkPlus}
 											language={match[1]}
@@ -161,12 +170,9 @@ export default function Article() {
 											{String(children).replace(/\n$/, '')}
 										</SyntaxHighlighter>
 									</div>
-								) : (
-									<code className={className} {...props}>
-										{children}
-									</code>
 								);
 							}
+
 						}}
 					>
 						{article.content}
