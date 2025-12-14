@@ -8,11 +8,15 @@
     "dev": "nodemon server.js",
     "production": "NODE_ENV=production node server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "dotenv": "^16.4.5",
     "mongoose": "^8.1.0",
+    "dotenv": "^16.4.5",
     "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2"
   }
 }
